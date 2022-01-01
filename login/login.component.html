@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h5>Please enter email & password!!</h5>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address :</label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                          <div id="emailHelp" class="form-text" style="color: pink">We'll never share your email with anyone else.</div><br>
+                          <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email Id is required</span>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password :</label>
+                          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"><br>
+                          <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</span>
+
+                        </div>
+                        
+                        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary" style="margin-left:auto;margin-right:auto;display:block;margin-top :5%;;margin-bottom:auto">Login</button>
+                </form>
+                <a style="color: white;" routerLink="/signup">New User? Click to SignUp!!</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "Signupusers": [
+    {
+      "fullname": "satya manikanta",
+      "email": "satyaprasads@yahoo.com",
+      "password": "7660058058",
+      "mobile": 7660058058,
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
